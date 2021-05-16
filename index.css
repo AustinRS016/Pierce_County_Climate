@@ -1,0 +1,100 @@
+.headers {
+background-color: black;
+ color: white;
+ font-family: 'Comic Sans MS'; cursive; sans-serif;
+ font-size: 1.6em;
+ padding: 20px;
+ text-align: center;
+}
+body {
+  font-family: "Tahoma"; sans-serif;
+  background-color: grey;
+  color: #2F2F2F;
+  font-size:1.2em;
+  max-width: 65em;
+
+  margin:auto;
+
+
+}
+
+#map {height: 75em;}
+.attribution {
+  color: #2f2f2f;
+  font-style: italic;
+  font-size: .5em;
+  position: relative;
+}
+.desc {
+  color: blue;
+  text-decoration: underline;
+}
+.head {
+  font-weight: bold;
+}
+
+.map-overlay .legend .bar {
+height: 10px;
+width: 100%;
+background: linear-gradient(to right, blue, red);
+}
+
+.map-overlay .map-overlay-inner {
+background-color: #fff;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+border-radius: 3px;
+padding: 10px;
+margin-bottom: 10px;
+z-index: 2;
+}
+.map-overlay {
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+position: absolute;
+width: 25%;
+top: 0;
+right: 0;
+padding: 10px;
+z-index: 2;
+}
+#menu {
+    background: grey;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#menu a {
+    font-size: 13px;
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+#menu a:last-child {
+    border: none;
+}
+
+#menu a:hover {
+    background-color:	#DCDCDC;
+    color: black;
+}
+
+#menu a.active {
+    background-color:	#DCDCDC;
+    color: black;
+}
+
+#menu a.active:hover {
+    background: grey;
+    color: black;
+}

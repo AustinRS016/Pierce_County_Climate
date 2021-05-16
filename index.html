@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Link to JQuery library-->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- insert Mapbox GL library links here -->
+			<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+			<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+			<link rel="stylesheet" href="index.css" type="text/css"/>
+
+	</head>
+
+	<body>
+		<h1 class="headers"><center>Pierce County Average Annual Precipitation</center></h1>
+		<!-- create div for the map here -->
+
+
+		<div id='map'>
+			<nav id='menu'></nav>
+			<div class="map-overlay top">
+				<div class="map-overlay-inner">
+					<div id="legend" class="legend">
+						<div class="bar"></div>
+						<div>Road Safety Index (safe to unsafe)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<script src = 'index.js'></script>
+<p>Click on each station to view additional statistics.</p>
+<p>Road Safety Index was computed in ArcGIS Pro using a data elevation model and interpolated average daily snow depth.</p>
+	</body>
+</html>
