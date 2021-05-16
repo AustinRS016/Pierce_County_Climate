@@ -218,46 +218,15 @@ function toggleLayer(ids, name) {
         layers.appendChild(link);
     }
 
-    // for (var i = 0; i < toggleableLayerIds.length; i++) {
-    //     var id = toggleableLayerIds[i];
-    //
-    //     var link = document.createElement('a');
-    //     link.href = '#';
-    //     link.className = '';
-    //     link.textContent = id;
-    //
-    //     link.onclick = function (e) {
-    //         var clickedLayer = this.textContent;
-    //         e.preventDefault();
-    //         e.stopPropagation();
-    //
-    //         var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
-    //
-    //         if (visibility === 'visible') {
-    //             map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-    //             map.setLayoutProperty('rainCount', 'visibility', 'visible');
-    //             map.setLayoutProperty('rain', 'visibility', 'visible');
-    //
-    //             this.className = '';
-    //         } else {
-    //             this.className = 'active';
-    //             map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
-    //             map.setLayoutProperty('rainCount', 'visibility', 'none');
-    //             map.setLayoutProperty('rain', 'visibility', 'none');
-    //         }
-    //     };
-    //
-    //     var layers = document.getElementById('menu');
-    //     layers.appendChild(link);
-    // }
-
 map.on('click', 'Rainfall/Stations', function (e) {
   var coordinates = e.features[0].geometry.coordinates.slice();
    new mapboxgl.Popup()
    .setLngLat(coordinates)
    .setHTML("<span class='head'>"+e.features[0].properties['NAME']+"</span>" +
         "<br>Data present for " + (e.features[0].properties['totalDays']/365).toFixed(0) + " years, " +
-        (e.features[0].properties['totalDays']%365) + " days" +
+            (e.features[0].properties['totalDays']%365) + " days" +
+        "<br><span class='elev'>Elevation:  " + e.features[0].properties['ELEVATION (METERS)'] +
+            " meters</span>" +
         "<br><span class='desc'>Yearly AVERAGES(in):</span>" +
         "<br>Snowfall: " + e.features[0].properties['avgYearlySnowfall(in)'].toFixed(2) +
         "<br>Rainfall: " + e.features[0].properties['avgYearlyPrecip(in)'].toFixed(2) +

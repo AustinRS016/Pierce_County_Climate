@@ -29,6 +29,9 @@ body {
   color: blue;
   text-decoration: underline;
 }
+.elev {
+  font-style: italic;
+}
 .head {
   font-weight: bold;
 }
