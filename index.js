@@ -68,7 +68,7 @@ map.on('load', function(){
           'circle-radius': 10,
           'circle-opacity': 0
         },
-       });
+      }); //invisible layer for large hover radius
        map.addLayer({
           "id":"stations",
           "type":"circle",
@@ -235,13 +235,18 @@ map.on('click', 'Rainfall/Stations', function (e) {
    .addTo(map);
 });
 
-map.on('mouseenter', 'Rainfall/Stations', function () {
+const element = (['safety','Rainfall/Stations'])
+
+
+
+map.on('mouseenter', element, function () {
   map.getCanvas().style.cursor = 'pointer';
 });
 
-map.on('mouseleave', 'Rainfall/Stations', function () {
+map.on('mouseleave', element, function () {
   map.getCanvas().style.cursor = '';
 });
+
 
 
 
